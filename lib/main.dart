@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:uhuy/views/LoginPage.dart';
 import 'package:uhuy/views/RegisterPage.dart';
+import 'package:uhuy/views/land.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,13 +14,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        scaffoldBackgroundColor: Colors.white,
-      ),
-      initialRoute: '/',
+      home: LandingPage(),
       routes: {
-        '/': (context) => LoginPage(),
-        '/registerPage': (context) => RegisterPage(),
+        '/register': (context) => RegisterPage(),
+        '/login':(context) => LoginPage(),
       },
     );
   }
