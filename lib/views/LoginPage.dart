@@ -53,7 +53,7 @@ class LoginPage extends StatelessWidget {
                   SizedBox(height: 20),
                   ElevatedButton(
                     onPressed: () {
-                      // Add your login logic here
+                       Navigator.pushNamed(context, '/land');// Add your login logic here
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.lightBlue,

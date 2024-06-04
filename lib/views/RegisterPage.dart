@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:uhuy/views/land.dart';
 
 class RegisterPage extends StatelessWidget {
   @override

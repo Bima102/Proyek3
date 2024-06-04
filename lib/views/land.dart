@@ -74,7 +74,7 @@ class LandingPage extends StatelessWidget {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(22)),
                       image: DecorationImage(
-                        image: AssetImage('kantor.jpg'), // Path to your image
+                        image: AssetImage('kantor.jpeg'), // Path to your image
                         fit: BoxFit.cover, // Adjust how the image should be fitted inside the container
                       ),
                       boxShadow: [
@@ -99,7 +99,7 @@ class LandingPage extends StatelessWidget {
                         child: Padding(
                           padding: const EdgeInsets.only(left: 16.0),
                           child: Text(
-                            "Layanan",
+                            "",
                             style: const TextStyle(
                               color: const Color(0xff202244),
                               fontWeight: FontWeight.w600,
@@ -118,15 +118,8 @@ class LandingPage extends StatelessWidget {
                         children: [
                           // Service Cards with Shadows
                           ServiceCard(
-                            label: "Profil",
+                            label: "Buat Surat",
                             imagePath: 'profil.png',
-                            onTap: () {
-                              Navigator.pushNamed(context, '/login');
-                            },
-                          ),
-                          ServiceCard(
-                            label: "Akun",
-                            imagePath: 'akun.png',
                             onTap: () {
                               Navigator.pushNamed(context, '/login');
                             },
@@ -135,16 +128,17 @@ class LandingPage extends StatelessWidget {
                             label: "Notifikasi",
                             imagePath: 'notif.png',
                             onTap: () {
-                              Navigator.pushNamed(context, '/register');
+                              Navigator.pushNamed(context, '/login');
                             },
                           ),
                           ServiceCard(
-                            label: "Struktur",
-                            imagePath: 'bank.png',
+                            label: "Akun",
+                            imagePath: 'akun.png',
                             onTap: () {
                               Navigator.pushNamed(context, '/register');
                             },
                           ),
+                          
                         ],
                       ),
                       // Rectangle
