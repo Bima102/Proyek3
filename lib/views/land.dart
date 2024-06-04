@@ -121,7 +121,7 @@ class LandingPage extends StatelessWidget {
                             label: "Buat Surat",
                             imagePath: 'profil.png',
                             onTap: () {
-                              Navigator.pushNamed(context, '/login');
+                              Navigator.pushNamed(context, '/menusurat');
                             },
                           ),
                           ServiceCard(
@@ -138,10 +138,9 @@ class LandingPage extends StatelessWidget {
                               Navigator.pushNamed(context, '/register');
                             },
                           ),
-                          
                         ],
                       ),
-                      // Rectangle
+                      // Rectangle with text "Test"
                       Container(
                         margin: EdgeInsets.only(top: 40),
                         width: 320,
@@ -157,6 +156,19 @@ class LandingPage extends StatelessWidget {
                             ),
                           ],
                           color: const Color(0xffffffff),
+                        ),
+                        child: Center(
+                          child: Text(
+                            "Sleman (bahasa Jawa: ꦱ꧀ꦭꦺꦩꦤ꧀) adalah desa di kecamatan Sliyeg, Indramayu, Jawa Barat, Indonesia.sleman adalah desa perbatasan antara wilayah Sleman Lor dengan batas nya adalah sebelah selatan Jl. Raya Jatibarang Karangampel dan sebelah timur berbatasan dengan desa Tambi,desa sleman merupakan desa sleman lama, Sleman juga merupakan desa maju di wilayah sliyeg, sleman berpenduduk ± 3800,mata pencaharian desa ini, 65%petani 10%pegawai swasta,20%pedagang dan 5%pengrajin batu bata,pusat pemerintahan berada di jl Raya Jatibarang Karangampel,sleman merupakan desa multi etnis antara lain padang,sunda,jawa wetan,china dan suku dayak, sleman adalah desa seni ini dengan di buktikannya banyak kesenian yang dimiliki ,desa itu seperti,organ tarling (Erna Jaya), singa gotong, dan wayang kulit dan desa ini terkenal dengan sebutan desa pelajar, dengan fasilitas pendidikan berupa 1 MDA (Madrasah Diniyah Awaliyah), 3 SD, dan 1 SMAN.Test",
+                            style: const TextStyle(
+                              color: const Color(0xff202244),
+                              fontWeight: FontWeight.w600,
+                              fontFamily: "Jost",
+                              fontStyle: FontStyle.normal,
+                              fontSize: 18.0,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
                         ),
                       ),
                     ],

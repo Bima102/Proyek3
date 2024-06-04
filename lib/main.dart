@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:uhuy/views/LoginPage.dart';
 import 'package:uhuy/views/RegisterPage.dart';
 import 'package:uhuy/views/land.dart';
+import 'package:uhuy/views/menusurat.dart';
 
 void main() {
   runApp(MyApp());
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
         '/register': (context) => RegisterPage(),
         '/login':(context) => LoginPage(),
         '/land':(context) => LandingPage(),
+        '/menusurat':(context) => MenuSurat(),
 
       },
     );
