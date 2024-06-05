@@ -3,6 +3,7 @@ import 'package:uhuy/views/LoginPage.dart';
 import 'package:uhuy/views/RegisterPage.dart';
 import 'package:uhuy/views/land.dart';
 import 'package:uhuy/views/menusurat.dart';
+import 'package:uhuy/views/notif.dart';
 
 void main() {
   runApp(MyApp());
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
         '/login':(context) => LoginPage(),
         '/land':(context) => LandingPage(),
         '/menusurat':(context) => MenuSurat(),
+        '/notif':(context) => NotifPage(),
 
       },
     );

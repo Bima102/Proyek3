@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class MenuSurat extends StatelessWidget {
+class NotifPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
@@ -80,11 +80,11 @@ class MenuSurat extends StatelessWidget {
                         IconButton(
                           icon: Icon(Icons.arrow_back, color: Color(0xff202244)),
                           onPressed: () {
-                            Navigator.pushNamed(context, '/land'); // Add your login logic here
+                            Navigator.pushNamed(context, '/land'); // Navigate back to landing page
                           },
                         ),
                         Text(
-                          "Surat",
+                          "Notifikasi",
                           style: const TextStyle(
                             color: Color(0xff202244),
                             fontWeight: FontWeight.w600,
@@ -110,7 +110,7 @@ class MenuSurat extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 16.0), // Add horizontal padding
                         child: Text(
-                          "Surat Kuasa Dalam Pelayanan Administrasi Kependudukan",
+                          "Tidak ada notifikasi saat ini",
                           style: const TextStyle(
                             color: Color(0xff202244),
                             fontWeight: FontWeight.w600,
@@ -123,7 +123,7 @@ class MenuSurat extends StatelessWidget {
                       ),
                     ),
                   ),
-                  // Add other widgets here as needed
+                  // Add other widgets or notifications here as needed
                 ],
               ),
             ),
@@ -133,3 +133,4 @@ class MenuSurat extends StatelessWidget {
     );
   }
 }
+

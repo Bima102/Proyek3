@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:uhuy/views/LoginPage.dart';
 import 'package:uhuy/views/RegisterPage.dart';
+import 'package:uhuy/views/menusurat.dart';
 
 class LandingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final screenHeight = MediaQuery.of(context).size.height;
+
     return Scaffold(
       body: Stack(
         children: [
@@ -30,9 +34,9 @@ class LandingPage extends StatelessWidget {
                 Align(
                   alignment: Alignment.topCenter,
                   child: Container(
-                    margin: EdgeInsets.only(top: 40), // Adjust this value as needed
-                    width: 362.642,
-                    height: 80.138,
+                    margin: EdgeInsets.only(top: screenHeight * 0.05),
+                    width: screenWidth * 0.9,
+                    height: screenHeight * 0.1,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(18)),
                       border: Border.all(
@@ -52,12 +56,12 @@ class LandingPage extends StatelessWidget {
                     child: Center(
                       child: Text(
                         "Desa Sleman",
-                        style: const TextStyle(
+                        style: TextStyle(
                           color: const Color(0xff202244),
                           fontWeight: FontWeight.w600,
                           fontFamily: "Jost",
                           fontStyle: FontStyle.normal,
-                          fontSize: 24.0,
+                          fontSize: screenHeight * 0.03,
                         ),
                         textAlign: TextAlign.center,
                       ),
@@ -66,57 +70,53 @@ class LandingPage extends StatelessWidget {
                 ),
                 // Container for the image with shadow
                 Align(
-                  alignment: Alignment.center, // Adjust the alignment as needed
+                  alignment: Alignment.center,
                   child: Container(
-                    margin: EdgeInsets.only(top: 40), // Adjust this value as needed to space out from the text box
-                    width: 294,
-                    height: 166,
+                    margin: EdgeInsets.only(top: screenHeight * 0.05),
+                    width: screenWidth * 0.8,
+                    height: screenHeight * 0.2,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(22)),
                       image: DecorationImage(
-                        image: AssetImage('kantor.jpeg'), // Path to your image
-                        fit: BoxFit.cover, // Adjust how the image should be fitted inside the container
+                        image: AssetImage('kantor.jpeg'),
+                        fit: BoxFit.cover,
                       ),
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.black.withOpacity(0.1), // Shadow color
-                          spreadRadius: 3, // Shadow spread radius
-                          blurRadius: 5, // Shadow blur radius
-                          offset: Offset(0, 3), // Shadow position (x, y)
+                          color: Colors.black.withOpacity(0.1),
+                          spreadRadius: 3,
+                          blurRadius: 5,
+                          offset: Offset(0, 3),
                         ),
                       ],
                     ),
                   ),
                 ),
-                // Adding the new content within a Column
                 Padding(
-                  padding: const EdgeInsets.only(top: 40),
+                  padding: EdgeInsets.only(top: screenHeight * 0.05),
                   child: Column(
                     children: [
-                      // HEADING
                       Align(
                         alignment: Alignment.centerLeft,
                         child: Padding(
-                          padding: const EdgeInsets.only(left: 16.0),
+                          padding: EdgeInsets.only(left: screenWidth * 0.05),
                           child: Text(
                             "",
-                            style: const TextStyle(
+                            style: TextStyle(
                               color: const Color(0xff202244),
                               fontWeight: FontWeight.w600,
                               fontFamily: "Jost",
                               fontStyle: FontStyle.normal,
-                              fontSize: 18.0,
+                              fontSize: screenHeight * 0.025,
                             ),
                             textAlign: TextAlign.left,
                           ),
                         ),
                       ),
-                      SizedBox(height: 10),
-                      // Services Row
+                      SizedBox(height: screenHeight * 0.01),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
-                          // Service Cards with Shadows
                           ServiceCard(
                             label: "Buat Surat",
                             imagePath: 'profil.png',
@@ -128,7 +128,7 @@ class LandingPage extends StatelessWidget {
                             label: "Notifikasi",
                             imagePath: 'notif.png',
                             onTap: () {
-                              Navigator.pushNamed(context, '/login');
+                              Navigator.pushNamed(context, '/notif');
                             },
                           ),
                           ServiceCard(
@@ -140,11 +140,10 @@ class LandingPage extends StatelessWidget {
                           ),
                         ],
                       ),
-                      // Rectangle with text "Test"
                       Container(
-                        margin: EdgeInsets.only(top: 40),
-                        width: 320,
-                        height: 130,
+                        margin: EdgeInsets.only(top: screenHeight * 0.05),
+                        width: screenWidth * 0.9,
+                        height: screenHeight * 0.2,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.all(Radius.circular(16)),
                           boxShadow: [
@@ -159,13 +158,13 @@ class LandingPage extends StatelessWidget {
                         ),
                         child: Center(
                           child: Text(
-                            "Sleman (bahasa Jawa: ꦱ꧀ꦭꦺꦩꦤ꧀) adalah desa di kecamatan Sliyeg, Indramayu, Jawa Barat, Indonesia.sleman adalah desa perbatasan antara wilayah Sleman Lor dengan batas nya adalah sebelah selatan Jl. Raya Jatibarang Karangampel dan sebelah timur berbatasan dengan desa Tambi,desa sleman merupakan desa sleman lama, Sleman juga merupakan desa maju di wilayah sliyeg, sleman berpenduduk ± 3800,mata pencaharian desa ini, 65%petani 10%pegawai swasta,20%pedagang dan 5%pengrajin batu bata,pusat pemerintahan berada di jl Raya Jatibarang Karangampel,sleman merupakan desa multi etnis antara lain padang,sunda,jawa wetan,china dan suku dayak, sleman adalah desa seni ini dengan di buktikannya banyak kesenian yang dimiliki ,desa itu seperti,organ tarling (Erna Jaya), singa gotong, dan wayang kulit dan desa ini terkenal dengan sebutan desa pelajar, dengan fasilitas pendidikan berupa 1 MDA (Madrasah Diniyah Awaliyah), 3 SD, dan 1 SMAN.Test",
-                            style: const TextStyle(
+                            "Sleman (bahasa Jawa: ꦱ꧀ꦭꦺꦩꦤ꧀) adalah desa di kecamatan Sliyeg, Indramayu, Jawa Barat, Indonesia.sleman adalah desa perbatasan antara wilayah Sleman Lor dengan batas nya adalah sebelah selatan Jl. Raya Jatibarang Karangampel dan sebelah timur berbatasan dengan desa Tambi, Sleman juga merupakan desa maju di wilayah sliyeg, pusat pemerintahan berada di jl Raya Jatibarang Karangampel, sleman adalah desa seni ini dengan di buktikannya banyak kesenian yang dimiliki ,desa itu seperti,organ tarling, singa gotong, dan wayang kulit",
+                            style: TextStyle(
                               color: const Color(0xff202244),
                               fontWeight: FontWeight.w600,
                               fontFamily: "Jost",
                               fontStyle: FontStyle.normal,
-                              fontSize: 18.0,
+                              fontSize: screenHeight * 0.015,
                             ),
                             textAlign: TextAlign.center,
                           ),
@@ -192,11 +191,14 @@ class ServiceCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final screenHeight = MediaQuery.of(context).size.height;
+
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        width: 80,
-        height: 100,
+        width: screenWidth * 0.2,
+        height: screenHeight * 0.15,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(20)),
           color: const Color(0xffffffff),
@@ -205,19 +207,19 @@ class ServiceCard extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              width: 30,
-              height: 30,
+              width: screenWidth * 0.1,
+              height: screenHeight * 0.07,
               child: Image.asset(imagePath),
             ),
-            SizedBox(height: 5),
+            SizedBox(height: screenHeight * 0.01),
             Text(
               label,
-              style: const TextStyle(
+              style: TextStyle(
                 color: const Color(0xff000000),
                 fontWeight: FontWeight.w800,
                 fontFamily: "Mulish",
                 fontStyle: FontStyle.normal,
-                fontSize: 9.0,
+                fontSize: screenHeight * 0.015,
               ),
               textAlign: TextAlign.center,
             ),
